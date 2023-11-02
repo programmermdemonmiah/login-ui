@@ -51,11 +51,11 @@ class GetStartedScreen extends StatelessWidget {
                     InkWell(onTap: () {
                       Get.to(LoginScreen());
                     }, child: customButton(buttonName: 'Login', color: buttonColor)),
-                    const SizedBox(height: 25,),
+                    const SizedBox(height: 20,),
                     InkWell(onTap: () {
                       Get.to( RegisterScreen());
                     }, child: customButton(buttonName: 'Register',)),
-                    const SizedBox(height: 20,),
+                    const SizedBox(height: 15,),
                   ],
                 )
               ],

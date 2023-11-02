@@ -36,14 +36,14 @@ class LoginScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
-                        height: 300,
-                        width: 300,
+                        height: 200,
+                        width: 180,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          color: Colors.black.withOpacity(0.2),
+                          color: Colors.white10.withOpacity(0.2),
                         ),
                         alignment: Alignment.center,
-                        child: Image.asset('assets/images/logo.png'),
+                        child: Image.asset('assets/images/logo.png', fit: BoxFit.fill,),
                       ),
                       const SizedBox(
                         height: 20,
