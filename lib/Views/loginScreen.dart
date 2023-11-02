@@ -59,8 +59,8 @@ class LoginScreen extends StatelessWidget {
                             ),
                             Text(
                               'Login to continue using the app',
-                              style:
-                                  TextStyle(color: Colors.black.withOpacity(0.5)),
+                              style: TextStyle(
+                                  color: Colors.black.withOpacity(0.5)),
                             ),
                             const SizedBox(
                               height: 25,
@@ -75,24 +75,38 @@ class LoginScreen extends StatelessWidget {
                             const SizedBox(
                               height: 5,
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(25),
-                                  border:
-                                      Border.all(width: 2, color: buttonColor)),
-                              child: TextFormField(
-                                validator: (email) {
-                                  if (email!.isEmpty) {
-                                    return 'Enter your email';
-                                  }
-                                },
-                                decoration: const InputDecoration(
+                            TextFormField(
+                              validator: (email) {
+                                if (email!.isEmpty) {
+                                  return 'Enter your email';
+                                }
+                              },
+                              decoration: InputDecoration(
                                   prefixIcon: Icon(Icons.person),
                                   contentPadding: EdgeInsets.all(15),
                                   hintMaxLines: 3,
                                   hintText: 'Enter your email',
-                                  border: InputBorder.none,
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(25),
+                                    borderSide: const BorderSide(
+                                      color: buttonColor,
+                                      width: 2,
+                                    )
                                 ),
+                                  enabled: true,
+                                  focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(25),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(25),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )),
                               ),
                             ),
                             const SizedBox(
@@ -108,28 +122,43 @@ class LoginScreen extends StatelessWidget {
                             const SizedBox(
                               height: 5,
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(25),
-                                  border:
-                                      Border.all(width: 2, color: buttonColor)),
-                              child: TextFormField(
-                                validator: (password) {
-                                  if (password!.isEmpty) {
-                                    return 'Enter your password';
-                                  }
-                                },
-                                obscureText: true,
-                                decoration: InputDecoration(
-                                  prefixIcon: const Icon(Icons.lock),
-                                  suffixIcon: IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(Icons.remove_red_eye_rounded)),
-                                  contentPadding: const EdgeInsets.all(15),
-                                  hintMaxLines: 3,
-                                  hintText: 'Enter your password',
-                                  border: InputBorder.none,
+                            TextFormField(
+                              validator: (password) {
+                                if (password!.isEmpty) {
+                                  return 'Enter your password';
+                                }
+                              },
+                              obscureText: true,
+                              decoration: InputDecoration(
+                                prefixIcon: const Icon(Icons.lock),
+                                suffixIcon: IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(
+                                        Icons.remove_red_eye_rounded)),
+                                contentPadding: const EdgeInsets.all(15),
+                                hintMaxLines: 3,
+                                hintText: 'Enter your password',
+                                enabled: true,
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(25),
+                                    borderSide: const BorderSide(
+                                      color: buttonColor,
+                                      width: 2,
+                                    )
                                 ),
+                                focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(25),
+                                    borderSide: const BorderSide(
+                                      color: buttonColor,
+                                      width: 2,
+                                    )
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(25),
+                                    borderSide: const BorderSide(
+                                      color: buttonColor,
+                                      width: 2,
+                                    )),
                               ),
                             ),
                             const SizedBox(
@@ -140,7 +169,12 @@ class LoginScreen extends StatelessWidget {
                               child: Tooltip(
                                 message: 'Forgot your password',
                                 child: InkWell(
-                                    onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => ForgotScreen(),));},
+                                    onTap: () {
+                                      Navigator.of(context)
+                                          .push(MaterialPageRoute(
+                                        builder: (context) => ForgotScreen(),
+                                      ));
+                                    },
                                     child: const Text('Forgot password?')),
                               ),
                             )
@@ -150,11 +184,12 @@ class LoginScreen extends StatelessWidget {
                       const SizedBox(
                         height: 30,
                       ),
-                      InkWell(onTap: () {
-                        if(_formKey.currentState!.validate()){
-
-                        }
-                      }, child: customButton(buttonName: 'Login', color: buttonColor)),
+                      InkWell(
+                          onTap: () {
+                            if (_formKey.currentState!.validate()) {}
+                          },
+                          child: customButton(
+                              buttonName: 'Login', color: buttonColor)),
                       const SizedBox(
                         height: 10,
                       ),
@@ -195,7 +230,8 @@ class LoginScreen extends StatelessWidget {
                               padding: const EdgeInsets.all(2),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                border: Border.all(width: 2, color: buttonColor),
+                                border:
+                                    Border.all(width: 2, color: buttonColor),
                               ),
                               child: Image.asset(
                                 'assets/images/facebook.png',
@@ -211,7 +247,8 @@ class LoginScreen extends StatelessWidget {
                               padding: const EdgeInsets.all(2),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                border: Border.all(width: 2, color: buttonColor),
+                                border:
+                                    Border.all(width: 2, color: buttonColor),
                               ),
                               child: Image.asset(
                                 'assets/images/google.png',
@@ -227,7 +264,8 @@ class LoginScreen extends StatelessWidget {
                               padding: const EdgeInsets.all(2),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                border: Border.all(width: 2, color: buttonColor),
+                                border:
+                                    Border.all(width: 2, color: buttonColor),
                               ),
                               child: Image.asset(
                                 'assets/images/apple.png',
@@ -241,17 +279,21 @@ class LoginScreen extends StatelessWidget {
                         height: 25,
                       ),
                       RichText(
-                          text: TextSpan(
-                            style: const TextStyle(color: Colors.black, fontSize: 20),
-                              children: [
-                        const TextSpan(text: "Don't have an account? "),
-                        TextSpan(
-                            text: ' Register',
-                            style: const TextStyle(color: buttonColor),
-                            recognizer: TapGestureRecognizer()..onTap = () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => RegisterScreen(),)),
-                        ),
-                              ]
-                          ),
+                        text: TextSpan(
+                            style: const TextStyle(
+                                color: Colors.black, fontSize: 20),
+                            children: [
+                              const TextSpan(text: "Don't have an account? "),
+                              TextSpan(
+                                text: ' Register',
+                                style: const TextStyle(color: buttonColor),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () => Navigator.of(context)
+                                          .push(MaterialPageRoute(
+                                        builder: (context) => RegisterScreen(),
+                                      )),
+                              ),
+                            ]),
                       )
                     ],
                   ),

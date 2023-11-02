@@ -70,24 +70,37 @@ final _formKey = GlobalKey<FormState>();
                             const SizedBox(
                               height: 5,
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(25),
-                                  border:
-                                  Border.all(width: 2, color: buttonColor)),
-                              child: TextFormField(
-                                validator: (email) {
-                                  if (email == null) {
-                                    return 'create username ';
-                                  }
-                                },
-                                decoration: const InputDecoration(
-                                  prefixIcon: Icon(Icons.person),
-                                  contentPadding: EdgeInsets.all(15),
-                                  hintMaxLines: 3,
-                                  hintText: 'username',
-                                  border: InputBorder.none,
+                            TextFormField(
+                              validator: (email) {
+                                if (email == null) {
+                                  return 'create username ';
+                                }
+                              },
+                              decoration:  InputDecoration(
+                                prefixIcon: Icon(Icons.person),
+                                hintMaxLines: 3,
+                                hintText: 'username',
+                                enabled: true,
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(25),
+                                    borderSide: const BorderSide(
+                                      color: buttonColor,
+                                      width: 2,
+                                    )
                                 ),
+                                focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(25),
+                                    borderSide: const BorderSide(
+                                      color: buttonColor,
+                                      width: 2,
+                                    )
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(25),
+                                    borderSide: const BorderSide(
+                                      color: buttonColor,
+                                      width: 2,
+                                    )),
                               ),
                             ),
                             const SizedBox(
@@ -103,24 +116,37 @@ final _formKey = GlobalKey<FormState>();
                             const SizedBox(
                               height: 5,
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(25),
-                                  border:
-                                  Border.all(width: 2, color: buttonColor)),
-                              child: TextFormField(
-                                validator: (email) {
-                                  if (email == null) {
-                                    return 'Enter your email';
-                                  }
-                                },
-                                decoration: const InputDecoration(
-                                  prefixIcon: Icon(Icons.person),
-                                  contentPadding: EdgeInsets.all(15),
-                                  hintMaxLines: 3,
-                                  hintText: 'Enter your email',
-                                  border: InputBorder.none,
+                            TextFormField(
+                              validator: (email) {
+                                if (email == null) {
+                                  return 'Enter your email';
+                                }
+                              },
+                              decoration: InputDecoration(
+                                prefixIcon: Icon(Icons.person),
+                                hintMaxLines: 3,
+                                hintText: 'Enter your email',
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(25),
+                                    borderSide: const BorderSide(
+                                      color: buttonColor,
+                                      width: 2,
+                                    )
                                 ),
+                                enabled: true,
+                                focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(25),
+                                    borderSide: const BorderSide(
+                                      color: buttonColor,
+                                      width: 2,
+                                    )
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(25),
+                                    borderSide: const BorderSide(
+                                      color: buttonColor,
+                                      width: 2,
+                                    )),
                               ),
                             ),
                             const SizedBox(
@@ -136,28 +162,42 @@ final _formKey = GlobalKey<FormState>();
                             const SizedBox(
                               height: 5,
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(25),
-                                  border:
-                                  Border.all(width: 2, color: buttonColor)),
-                              child: TextFormField(
-                                obscureText: true,
-                                validator: (password) {
-                                  if (password == null) {
-                                    return 'Enter your password';
-                                  }
-                                },
-                                decoration: InputDecoration(
-                                  prefixIcon: const Icon(Icons.lock),
-                                  suffixIcon: IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(Icons.remove_red_eye_rounded)),
-                                  contentPadding: const EdgeInsets.all(15),
-                                  hintMaxLines: 3,
-                                  hintText: 'Enter your password',
-                                  border: InputBorder.none,
+                            TextFormField(
+                              obscureText: true,
+                              validator: (password) {
+                                if (password == null) {
+                                  return 'Enter your password';
+                                }
+                              },
+                              decoration: InputDecoration(
+                                prefixIcon: const Icon(Icons.lock),
+                                suffixIcon: IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(Icons.remove_red_eye_rounded)),
+                                contentPadding: const EdgeInsets.all(15),
+                                hintMaxLines: 3,
+                                hintText: 'Enter your password',
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(25),
+                                    borderSide: const BorderSide(
+                                      color: buttonColor,
+                                      width: 2,
+                                    )
                                 ),
+                                enabled: true,
+                                focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(25),
+                                    borderSide: const BorderSide(
+                                      color: buttonColor,
+                                      width: 2,
+                                    )
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(25),
+                                    borderSide: const BorderSide(
+                                      color: buttonColor,
+                                      width: 2,
+                                    )),
                               ),
                             ),
                             const SizedBox(
@@ -173,28 +213,42 @@ final _formKey = GlobalKey<FormState>();
                             const SizedBox(
                               height: 5,
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(25),
-                                  border:
-                                  Border.all(width: 2, color: buttonColor)),
-                              child: TextFormField(
-                                validator: (password) {
-                                  if (password == null) {
-                                    return 'Re-type your password';
-                                  }
-                                },
-                                obscureText: true,
-                                decoration: InputDecoration(
-                                  prefixIcon: const Icon(Icons.lock),
-                                  suffixIcon: IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(Icons.remove_red_eye_rounded)),
-                                  contentPadding: const EdgeInsets.all(15),
-                                  hintMaxLines: 3,
-                                  hintText: 'Enter your password',
-                                  border: InputBorder.none,
+                            TextFormField(
+                              validator: (password) {
+                                if (password == null) {
+                                  return 'Re-type your password';
+                                }
+                              },
+                              obscureText: true,
+                              decoration: InputDecoration(
+                                prefixIcon: const Icon(Icons.lock),
+                                suffixIcon: IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(Icons.remove_red_eye_rounded)),
+                                contentPadding: const EdgeInsets.all(15),
+                                hintMaxLines: 3,
+                                hintText: 'Enter your password',
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(25),
+                                    borderSide: const BorderSide(
+                                      color: buttonColor,
+                                      width: 2,
+                                    )
                                 ),
+                                enabled: true,
+                                focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(25),
+                                    borderSide: const BorderSide(
+                                      color: buttonColor,
+                                      width: 2,
+                                    )
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(25),
+                                    borderSide: const BorderSide(
+                                      color: buttonColor,
+                                      width: 2,
+                                    )),
                               ),
                             ),
                           ],

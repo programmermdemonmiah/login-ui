@@ -72,10 +72,6 @@ class OtpScreen extends StatelessWidget {
                             Container(
                               height: 50,
                               width: 50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  border:
-                                      Border.all(width: 2, color: buttonColor)),
                               child: TextFormField(
                                 validator: (code) {
                                   if (code!.isEmpty) {
@@ -83,9 +79,28 @@ class OtpScreen extends StatelessWidget {
                                   }
                                 },
                                 maxLength: 1,
-                                decoration: const InputDecoration(
-                                  contentPadding: EdgeInsets.all(10),
-                                  border: InputBorder.none,
+                                decoration:  InputDecoration(
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )
+                                  ),
+                                  enabled: true,
+                                  focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )),
                                   counterText: '',
                                 ),
                               ),
@@ -93,10 +108,6 @@ class OtpScreen extends StatelessWidget {
                             Container(
                               height: 50,
                               width: 50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  border:
-                                      Border.all(width: 2, color: buttonColor)),
                               child: TextFormField(
                                 validator: (code) {
                                   if (code!.isEmpty) {
@@ -104,9 +115,28 @@ class OtpScreen extends StatelessWidget {
                                   }
                                 },
                                 maxLength: 1,
-                                decoration: const InputDecoration(
-                                  contentPadding: EdgeInsets.all(10),
-                                  border: InputBorder.none,
+                                decoration:  InputDecoration(
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )
+                                  ),
+                                  enabled: true,
+                                  focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )),
                                   counterText: '',
                                 ),
                               ),
@@ -114,10 +144,6 @@ class OtpScreen extends StatelessWidget {
                             Container(
                               height: 50,
                               width: 50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  border:
-                                      Border.all(width: 2, color: buttonColor)),
                               child: TextFormField(
                                 validator: (code) {
                                   if (code!.isEmpty) {
@@ -125,9 +151,28 @@ class OtpScreen extends StatelessWidget {
                                   }
                                 },
                                 maxLength: 1,
-                                decoration: const InputDecoration(
-                                  contentPadding: EdgeInsets.all(10),
-                                  border: InputBorder.none,
+                                decoration:  InputDecoration(
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )
+                                  ),
+                                  enabled: true,
+                                  focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )),
                                   counterText: '',
                                 ),
                               ),
@@ -135,10 +180,6 @@ class OtpScreen extends StatelessWidget {
                             Container(
                               height: 50,
                               width: 50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  border:
-                                      Border.all(width: 2, color: buttonColor)),
                               child: TextFormField(
                                 validator: (code) {
                                   if (code!.isEmpty) {
@@ -146,9 +187,28 @@ class OtpScreen extends StatelessWidget {
                                   }
                                 },
                                 maxLength: 1,
-                                decoration: const InputDecoration(
-                                  contentPadding: EdgeInsets.all(10),
-                                  border: InputBorder.none,
+                                decoration:  InputDecoration(
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )
+                                  ),
+                                  enabled: true,
+                                  focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )),
                                   counterText: '',
                                 ),
                               ),
@@ -156,10 +216,6 @@ class OtpScreen extends StatelessWidget {
                             Container(
                               height: 50,
                               width: 50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  border:
-                                      Border.all(width: 2, color: buttonColor)),
                               child: TextFormField(
                                 validator: (code) {
                                   if (code!.isEmpty) {
@@ -167,9 +223,28 @@ class OtpScreen extends StatelessWidget {
                                   }
                                 },
                                 maxLength: 1,
-                                decoration: const InputDecoration(
-                                  contentPadding: EdgeInsets.all(10),
-                                  border: InputBorder.none,
+                                decoration:  InputDecoration(
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )
+                                  ),
+                                  enabled: true,
+                                  focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )),
                                   counterText: '',
                                 ),
                               ),
@@ -177,10 +252,6 @@ class OtpScreen extends StatelessWidget {
                             Container(
                               height: 50,
                               width: 50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  border:
-                                      Border.all(width: 2, color: buttonColor)),
                               child: TextFormField(
                                 validator: (code) {
                                   if (code!.isEmpty) {
@@ -188,13 +259,34 @@ class OtpScreen extends StatelessWidget {
                                   }
                                 },
                                 maxLength: 1,
-                                decoration: const InputDecoration(
-                                  contentPadding: EdgeInsets.all(10),
-                                  border: InputBorder.none,
+                                decoration:  InputDecoration(
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )
+                                  ),
+                                  enabled: true,
+                                  focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                        color: buttonColor,
+                                        width: 2,
+                                      )),
                                   counterText: '',
                                 ),
                               ),
                             ),
+
+
                           ],
                         ),
                       ),
