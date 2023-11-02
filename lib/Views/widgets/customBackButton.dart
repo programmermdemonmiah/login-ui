@@ -1,4 +1,4 @@
-import 'package:e_commerce_login/Views/utils/color.dart';
+import 'package:e_commerce_login/Utils/color.dart';
 import 'package:flutter/material.dart';
 
 Widget customBackButton({required BuildContext context}){

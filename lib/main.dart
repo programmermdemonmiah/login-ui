@@ -1,7 +1,11 @@
-import 'package:e_commerce_login/Views/startupScreen.dart';
+import 'package:e_commerce_login/All_Binding/all_binding.dart';
+import 'package:e_commerce_login/Views/Splash/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main(){
+  WidgetsFlutterBinding.ensureInitialized();
+  AllBinding().dependencies();
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
@@ -9,12 +13,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       theme: ThemeData(
 
       ),
       debugShowCheckedModeBanner: false,
-      home: const StartUpScreen(),
+      home: const SplashScreen(),
     );
   }
 }

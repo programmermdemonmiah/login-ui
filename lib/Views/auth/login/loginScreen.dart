@@ -1,16 +1,21 @@
-import 'package:e_commerce_login/Views/forgotScreen.dart';
-import 'package:e_commerce_login/Views/registerScreen.dart';
-import 'package:e_commerce_login/Views/utils/color.dart';
+
+import 'package:e_commerce_login/Views/auth/Register/registerScreen.dart';
+import 'package:e_commerce_login/Views/auth/fogot/forgotScreen.dart';
+import 'package:e_commerce_login/Utils/color.dart';
 import 'package:e_commerce_login/Views/widgets/customBackButton.dart';
 import 'package:e_commerce_login/Views/widgets/customButton.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../../../controllers/login_screen_state_controller.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
 
   final _formKey = GlobalKey<FormState>();
   String? password;
+  final passController = Get.put(PasswordStateController());
 
   @override
   Widget build(BuildContext context) {
@@ -34,10 +39,14 @@ class LoginScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
-                        height: 45,
-                        width: 130,
+                        height: 300,
+                        width: 300,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.black.withOpacity(0.2),
+                        ),
                         alignment: Alignment.center,
-                        child: Image.asset('assets/images/priyoshop.png'),
+                        child: Image.asset('assets/images/logo.png'),
                       ),
                       const SizedBox(
                         height: 20,
@@ -128,13 +137,15 @@ class LoginScreen extends StatelessWidget {
                                   return 'Enter your password';
                                 }
                               },
-                              obscureText: true,
+                              obscureText: passController.isSecure.value,
                               decoration: InputDecoration(
                                 prefixIcon: const Icon(Icons.lock),
-                                suffixIcon: IconButton(
-                                    onPressed: () {},
-                                    icon: const Icon(
-                                        Icons.remove_red_eye_rounded)),
+                                suffixIcon: Obx(() =>  IconButton(
+                                    onPressed: () {
+                                      passController.showPassword();
+                                    },
+                                    icon: passController.isSecure.value == true ? const Icon(
+                                        Icons.visibility) : const Icon(Icons.visibility_off))),
                                 contentPadding: const EdgeInsets.all(15),
                                 hintMaxLines: 3,
                                 hintText: 'Enter your password',

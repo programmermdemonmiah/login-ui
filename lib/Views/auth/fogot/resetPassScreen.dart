@@ -1,8 +1,9 @@
-import 'package:e_commerce_login/Views/startupScreen.dart';
-import 'package:e_commerce_login/Views/utils/color.dart';
+import 'package:e_commerce_login/Views/GetStarted_Screens/get_started_screen.dart';
+import 'package:e_commerce_login/Utils/color.dart';
 import 'package:e_commerce_login/Views/widgets/customBackButton.dart';
 import 'package:e_commerce_login/Views/widgets/customButton.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ResetPasswordScreen extends StatelessWidget {
    ResetPasswordScreen({super.key});
@@ -153,8 +154,7 @@ final _formKey = GlobalKey<FormState>();
                       const SizedBox(height: 60,),
                       InkWell(onTap: () {
                         if (_formKey.currentState!.validate()) {
-                          Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => StartUpScreen(),));
+                         Get.to(const GetStartedScreen());
                         }
                       }, child: customButton(buttonName: 'Send Code',
                           color: buttonColor)),
