@@ -86,10 +86,11 @@ class LoginScreen extends StatelessWidget {
                                 if (email!.isEmpty) {
                                   return 'Enter your email';
                                 }
+                                return null;
                               },
                               decoration: InputDecoration(
-                                  prefixIcon: Icon(Icons.person),
-                                  contentPadding: EdgeInsets.all(15),
+                                  prefixIcon: const Icon(Icons.person),
+                                  contentPadding:const EdgeInsets.all(15),
                                   hintMaxLines: 3,
                                   hintText: 'Enter your email',
                                 border: OutlineInputBorder(
@@ -133,6 +134,7 @@ class LoginScreen extends StatelessWidget {
                                 if (password!.isEmpty) {
                                   return 'Enter your password';
                                 }
+                                return null;
                               },
                               obscureText: passController.isSecure.value,
                               decoration: InputDecoration(
