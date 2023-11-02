@@ -1,13 +1,15 @@
+import 'package:e_commerce_login/Utils/colors.dart';
 import 'package:e_commerce_login/Views/GetStarted_Screens/get_started_screen.dart';
-import 'package:e_commerce_login/Utils/color.dart';
 import 'package:e_commerce_login/Views/widgets/customBackButton.dart';
 import 'package:e_commerce_login/Views/widgets/customButton.dart';
+import 'package:e_commerce_login/controllers/password_state_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ResetPasswordScreen extends StatelessWidget {
    ResetPasswordScreen({super.key});
-final _formKey = GlobalKey<FormState>();
+    final _formKey = GlobalKey<FormState>();
+    final passController = Get.put(PasswordStateController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,17 +67,18 @@ final _formKey = GlobalKey<FormState>();
                             const SizedBox(
                               height: 5,
                             ),
-                            TextFormField(
+                            Obx(() => TextFormField(
                               validator: (password) {
                                 if (password!.isEmpty) {
                                   return 'Enter your new password';
                                 }
-                                else {}
+                                return null;
                               },
+                              obscureText: passController.isSecure.value,
                               decoration: InputDecoration(
-                                prefixIcon: Icon(Icons.lock),
-                                suffixIcon: IconButton(onPressed: (){}, icon: Icon(Icons.remove_red_eye_rounded)),
-                                contentPadding: EdgeInsets.all(15),
+                                prefixIcon: const Icon(Icons.lock),
+                                suffixIcon: IconButton(onPressed: (){passController.showPassword();}, icon: passController.isSecure.value?const Icon(Icons.visibility): const Icon(Icons.visibility_off)),
+                                contentPadding: const EdgeInsets.all(15),
                                 hintMaxLines: 3,
                                 hintText: 'Enter your new password',
                                 border: OutlineInputBorder(
@@ -100,7 +103,7 @@ final _formKey = GlobalKey<FormState>();
                                       width: 2,
                                     )),
                               ),
-                            ),
+                            )),
                             const SizedBox(height: 15,),
                             const Text(
                               'Re-type Password',
@@ -112,17 +115,18 @@ final _formKey = GlobalKey<FormState>();
                             const SizedBox(
                               height: 5,
                             ),
-                            TextFormField(
+                            Obx(() => TextFormField(
                               validator: (password) {
                                 if (password!.isEmpty) {
                                   return 'Re-type your new password';
                                 }
-                                else {}
+                                return null;
                               },
+                              obscureText: passController.isSecure.value,
                               decoration: InputDecoration(
-                                prefixIcon: Icon(Icons.lock),
-                                suffixIcon: IconButton(onPressed: (){}, icon: Icon(Icons.remove_red_eye_rounded)),
-                                contentPadding: EdgeInsets.all(15),
+                                prefixIcon: const Icon(Icons.lock),
+                                suffixIcon: IconButton(onPressed: (){passController.showPassword();}, icon: passController.isSecure.value?const Icon(Icons.visibility): const Icon(Icons.visibility_off)),
+                                contentPadding: const EdgeInsets.all(15),
                                 hintMaxLines: 3,
                                 hintText: 'Re-type your new password',
                                 border: OutlineInputBorder(
@@ -147,7 +151,7 @@ final _formKey = GlobalKey<FormState>();
                                       width: 2,
                                     )),
                               ),
-                            ),
+                            )),
                           ],
                         ),
                       ),
@@ -156,7 +160,7 @@ final _formKey = GlobalKey<FormState>();
                         if (_formKey.currentState!.validate()) {
                          Get.to(const GetStartedScreen());
                         }
-                      }, child: customButton(buttonName: 'Send Code',
+                      }, child: customButton(buttonName: 'Reset password',
                           color: buttonColor)),
                       const SizedBox(height: 15,)
                     ],

@@ -1,20 +1,17 @@
-
 import 'package:e_commerce_login/Views/auth/Register/registerScreen.dart';
 import 'package:e_commerce_login/Views/auth/fogot/forgotScreen.dart';
-import 'package:e_commerce_login/Utils/color.dart';
+import 'package:e_commerce_login/Utils/colors.dart';
 import 'package:e_commerce_login/Views/widgets/customBackButton.dart';
 import 'package:e_commerce_login/Views/widgets/customButton.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../../controllers/login_screen_state_controller.dart';
+import '../../../controllers/password_state_controller.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
 
   final _formKey = GlobalKey<FormState>();
-  String? password;
   final passController = Get.put(PasswordStateController());
 
   @override
@@ -131,7 +128,7 @@ class LoginScreen extends StatelessWidget {
                             const SizedBox(
                               height: 5,
                             ),
-                            TextFormField(
+                            Obx(() => TextFormField(
                               validator: (password) {
                                 if (password!.isEmpty) {
                                   return 'Enter your password';
@@ -140,12 +137,12 @@ class LoginScreen extends StatelessWidget {
                               obscureText: passController.isSecure.value,
                               decoration: InputDecoration(
                                 prefixIcon: const Icon(Icons.lock),
-                                suffixIcon: Obx(() =>  IconButton(
+                                suffixIcon: IconButton(
                                     onPressed: () {
                                       passController.showPassword();
                                     },
                                     icon: passController.isSecure.value == true ? const Icon(
-                                        Icons.visibility) : const Icon(Icons.visibility_off))),
+                                        Icons.visibility) : const Icon(Icons.visibility_off)),
                                 contentPadding: const EdgeInsets.all(15),
                                 hintMaxLines: 3,
                                 hintText: 'Enter your password',
@@ -171,7 +168,7 @@ class LoginScreen extends StatelessWidget {
                                       width: 2,
                                     )),
                               ),
-                            ),
+                            )),
                             const SizedBox(
                               height: 4,
                             ),
